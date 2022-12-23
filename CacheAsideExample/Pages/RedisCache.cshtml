@@ -1,0 +1,14 @@
+﻿@page
+@model RedisCacheModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Redis Caching</h1>
+    @foreach (var item in Model.CurrentRates)
+    {
+        <p>@item.Currency: @item.Rate  at @item.Date</p>
+    }
+    Total ms:@Model.ElapsedMilliseconds
+</div>
